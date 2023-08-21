@@ -464,7 +464,7 @@ main section
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  color: var(--adres-text-color);
+  color: var(--nav-log-foot-color);
   text-align: center;
   margin-bottom: 72px;
 }
@@ -762,15 +762,20 @@ main section
   padding: 0;
   background-color: var(--cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition), border var(--transition);
 }
 
-.border-btn:hover,
-.border-btn:focus {
+.modal-btn:hover {
   background-color: var(--brand-color);
   border: none;
 }
 
+.modal-btn:focus {
+  background-color: var(--brand-color);
+  border: none;
+  fill: #ffffff;
+}
+
 .modal-btn-icon {
-  transition: var(--transition);
+  transition: fill var(--transition);
 }
