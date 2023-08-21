@@ -7,8 +7,12 @@
   --brand-color: #404bbf;
   --prymary-fonts: 'Roboto', sans-serif;
   --title-font: 'Raleway', sans-serif;
-  --cornflower,
-  #E7E9FC;
+  --cornflower: #E7E9FC;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* others form*/
+  --indent: 24px;
+  --items: 4;
 }
 
 /* base styles */
@@ -88,6 +92,7 @@ button {
 /* Top line */
 .block-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .container-nav {
@@ -107,7 +112,7 @@ button {
   align-items: center;
   margin-right: 76px;
   font-family: "Raleway", sans-serif;
-  color: #4D5AE5;
+  color: var(--button-color);
   font-size: 18px;
   font-style: normal;
   font-weight: 800;
@@ -133,15 +138,17 @@ button {
 }
 
 .link-nav {
+  position: relative;
   display: block;
   padding: 24px 0;
   font-style: normal;
+  transition: color var(--transition);
 
 }
 
 .link-nav:hover,
 .link-nav:focus {
-  color: #404bbf;
+  color: var(--brand-color);
 }
 
 .adress {
@@ -155,7 +162,7 @@ button {
 .list-adress {
   display: flex;
   gap: 40px;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .adsress-menu {}
@@ -165,6 +172,7 @@ button {
   padding-top: 24px;
   padding-bottom: 24px;
   gap: 40px;
+  transition: color var(--transition);
 }
 
 .adress-link:hover,
@@ -182,6 +190,13 @@ main section
   padding: 188px 0;
   background: var(--nav-log-foot-color, #2e2f42);
   flex-shrink: 0;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)), url(../images/background-img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1440px;
+  height: 600px;
 }
 
 .container-main {
@@ -208,6 +223,7 @@ main section
 
 
 .major-button {
+  align-items: center;
   margin: 0;
   padding: 16px 32px;
   gap: 10px;
@@ -224,7 +240,7 @@ main section
   /* 107.143% */
   letter-spacing: 0.04em;
   border-radius: 4px;
-  align-items: center;
+  transition: background-color var(--transition);
 }
 
 .major-button:hover,
@@ -236,22 +252,14 @@ main section
 /* Fatures section */
 .sections-feature {
   padding-top: 120px;
-  background-colocolor: #ffffff;
+  background-color: var(--primary-white-color);
 }
 
 .furture-container {}
 
-.future-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  align-content: space-between;
+.future-list {}
 
-}
-
-.title-future-desc {
-  width: calc((100% - 72px) / 4);
-}
+.title-future-desc {}
 
 .title-future {
   margin-bottom: 8px;
@@ -265,6 +273,31 @@ main section
   text-align: start;
 }
 
+.future-list-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  background-color: var(--classic-background-color);
+  margin-bottom: 8px;
+}
+
+.future-icom {}
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+
+
 .text-desc {
   color: var(--adres-text-color, #434455);
   font-size: 1rem;
@@ -277,7 +310,7 @@ main section
 
 /* What are we doing section */
 .sections-what-are {
-  background-color: #FFFFFF;
+  background-color: var(--primary-white-color);
 }
 
 .container-what-img {}
@@ -296,20 +329,16 @@ main section
 
 }
 
-.block-image-what {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
+.block-image-what {}
 
 .block-image-line {
-  width: calc((100% - 48px) / 3);
+  --items: 3;
 }
 
 /* Team section */
 .sections-team {
   padding-top: 120px;
-  background-color: #F4F4FD;
+  background-color: var(--classic-background-color);
 }
 
 .container-taem {}
@@ -335,7 +364,7 @@ main section
 }
 
 .title-our-team {
-  background-color: #FFFFFF;
+  background-color: var(--primary-white-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   width: calc((100% - 72px) / 4);
