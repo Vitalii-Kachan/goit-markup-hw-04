@@ -444,7 +444,10 @@ main section
   transition: background-color var(--transition);
 }
 
-.team-social-link:hover,
+.team-social-link:hover {
+  background-color: var(--brand-color);
+}
+
 .team-social-link:focus {
   background-color: var(--brand-color);
 }
@@ -461,7 +464,7 @@ main section
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  color: var(--brand-color);
+  color: var(--adres-text-color);
   text-align: center;
   margin-bottom: 72px;
 }
@@ -486,10 +489,14 @@ main section
   transition: color var(--transition), border-color var(--transition);
 }
 
-.customers-list-link:hover,
-.customers-list-link:focus {
-  color: var(--brand-color);
+.customers-list-link:hover {
   border-color: var(--brand-color);
+  color: var(--brand-color);
+}
+
+.customers-list-link:focus {
+  border-color: var(--brand-color);
+  color: var(--brand-color);
 }
 
 .customers-icons {
@@ -684,11 +691,14 @@ main section
   border-radius: 50%;
   flex-shrink: 0;
   fill: var(--classic-background-color);
-  background-color: var(--brand-color);
+  background-color: var(--button-color);
   transition: background-color var(--transition);
 }
 
-.footer-social-link:hover,
+.footer-social-link:hover {
+  background-color: var(--green);
+}
+
 .footer-social-link:focus {
   background-color: var(--green);
 }
@@ -698,17 +708,20 @@ main section
   position: fixed;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
-  background-color: rgba(46, 47, 66, 0.40);
-  transition: opacity var(--transition), visibility var(--transition);
+
+  background-color: rgba(17, 17, 17, 0.5);
+  backdrop-filter: blur(1px);
+
+  transition: opacity 300ms ease-out, visibility 300ms ease-out;
 }
 
-.is-hiden {
+.backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
 }
 
 .modal {
@@ -717,12 +730,13 @@ main section
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   opacity: 1;
-  transition: transform var(--transition);
-  width: 408px;
-  min-height: 584px;
-  border-radius: 4px;
-  background: var(--classic-background-color);
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+  width: 517px;
+  min-height: 794px;
+  border-radius: 15px;
+  background-color: #fafafa;
+
+  transition: transform 150ms ease-in 300ms, opacity 150ms ease-in 300ms;
 }
 
 .backdrop.is-hidden .modal {
@@ -734,26 +748,14 @@ main section
   position: absolute;
   top: 24px;
   right: 24px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: var(--adres-text-color);
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--dairy);
-  width: 24px;
-  height: 24px;
+
   padding: 0;
-  transition: background-color var(--transition), border var(--transition);
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-  background-color: var(--brand-color);
+  background-color: transparent;
   border: none;
-  fill: var(--primary-white-color);
 }
 
-.modal-icon-btn {
-  transition: fill var(--transition);
-}
+.modal-btn-icon {}
