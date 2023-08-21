@@ -704,10 +704,11 @@ main section
   transition: opacity var(--transition), visibility var(--transition);
 }
 
-.backdrop.is-hidden {
+.is-hiden {
   opacity: 0;
-  pointer-events: none;
   visibility: hidden;
+  pointer-events: none;
+
 }
 
 .modal {
