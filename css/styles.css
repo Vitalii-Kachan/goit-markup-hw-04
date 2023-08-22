@@ -522,7 +522,7 @@ main section
   padding: 0;
 }
 
-.button-port-item: {
+.button-port-item {
   transition: var(--transition);
 }
 
@@ -538,7 +538,7 @@ main section
   background-color: var(--classic-background-color, #f4f4fd);
   font-weight: 500;
   font-size: 16px;
-  transition line-height: 1.5em;
+  transition: var(--transition);
   letter-spacing: 0.04em;
   min-width: 69px;
   min-height: 48px;
@@ -781,14 +781,16 @@ main section
 .modal-btn:hover {
   background-color: var(--brand-color);
   border: none;
+  fill: var(--primary-white-color);
 }
 
 .modal-btn:focus {
   background-color: var(--brand-color);
   border: none;
-  fill: #ffffff;
+  fill: var(--primary-white-color);
 }
 
 .modal-btn-icon {
   transition: fill var(--transition);
+
 }
