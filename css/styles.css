@@ -65,6 +65,7 @@ button {
 /* reset ends */
 .section {
   padding-bottom: 120px;
+  margin: 0;
 }
 
 /* container */
@@ -211,16 +212,19 @@ main section
 
 /* dark block section */
 .sections-dark {
+  display: flex;
+  margin: 0 auto;
   padding: 188px 0;
-  background: var(--nav-log-foot-color, #2e2f42);
+  background-color: var(--nav-log-foot-color, #2e2f42);
   flex-shrink: 0;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)), url(../images/background-img/hero-bg.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-size: cover;
   max-width: 1440px;
   height: 600px;
+  margin: 0;
 }
 
 .container-main {
